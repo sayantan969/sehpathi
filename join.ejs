@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="/css/icons8-save-32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/join.css">    <title>join us </title>
+</head>
+<body >
+
+  <div class="form">
+    <h1 class="sp"> sign-up </h1>
+    <form id="form" action="/submit" method="post" enctype="multipart/form-data"> 
+        <label for="user"> username</label><br>
+        <input type="text" name="user" id="user"><br>
+        <label for="email">email-id</label><br>
+        <input type="email" name="email" id="email"><br> 
+        <label for="phone-number">phone number</label> <br>
+        <input type="tel" name="phone_no" id="phone-number"><br> 
+        <label for="password"> enter password</label><br>
+        <input type="password" name="password" id="password"><br> 
+        <label for="image">enter your profile picture </label><br>
+        <input type="file" name="image" id="picture"><br> 
+        <button type="submit">submit</button><br> 
+    </form>
+</div>
+</body>
+<script>
+  <!-- let form = document.getElementById("form");
+  form.addEventListener("submit",(e)=>{
+    myFunction(e);
+  }) -->
+  async function myFunction (e){
+    e.preventDefault();
+    var user = document.getElementById("user").value;
+    var email = document.querySelector("#email");
+    var phone_no = document.querySelector("#phone-number");
+    var pass = document.querySelector("#password");
+    var file = document.getElementById("picture");
+    var imgUrl;
+    try{
+      var img = file.files[0];
+      var reader = new FileReader();
+      reader.onloadend = async function() {
+        imgUrl = reader.result;
+        await fetch("http://localhost:3000/submit",{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({user:user,email:email.value,phone_no:phone_no.value,password:pass.value,imageUrl:imgUrl})})
+      }
+      reader.readAsDataURL(img);
+    }catch(e){
+
+    }
+
+            }
+</script>
+</html>

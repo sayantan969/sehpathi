@@ -1,0 +1,130 @@
+.navbar{
+    
+    background-color: #1B6B93;
+    
+}
+
+.st{
+  background-image: url("/css/jess-bailey-X5gDoysLbBc-unsplash.jpg"); 
+       width: 100%;
+    height: auto;
+    padding: 8rem 10px;
+    justify-content: center;
+    background-color: (230, 235, 239,.9);
+    text-align: center;
+     background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;  
+    background-color: #f8f9fa; 
+    overflow-x: hidden;
+}
+.h{
+    text-align: left;
+    margin-left: 12%;
+    padding: 5px;
+    font-size: 30px;
+    color: rgb(97, 113, 119);
+}
+
+
+.btn-three {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+    height: 80px;
+    width: 150px;
+    margin: 180px 70% 0px 20%  ;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    
+  }
+  .btn-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+  .btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  .btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+  .btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+  .pro {
+    background-image: url("/css/sincerely-media-DgQf1dUKUTM-unsplash.jpg");
+    background-size: 100% 100%; /* or 'contain' for fitting the entire image within the container */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    flex-shrink: 0;
+    gap: 2rem;
+}
+
+  .card{
+    display: inline-flex;
+    width:270px;
+height: 244.91px;
+flex-shrink: 0;
+background-color:rgba(168, 223, 142, 0.75) ;
+background-color: linear-gradient(136deg, rgba(168, 223, 142, 0.75) 9.75%, rgba(159, 223, 142, 0.53) 91.91%);
+margin: 25px;
+margin-left: 100px;
+border-radius: 10px;
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+
+
+  }
+
+.h2{
+  text-align: center;
+  margin: 15px auto 15px auto;
+  padding: 5px;
+  font-size: 40px;
+  color: rgb(97, 113, 119);
+  border-radius: 10px;
+}
+.new{
+  width: 800px;
+height: 351px;
+flex-shrink: 0;
+margin: 50px auto 50px auto;
+display: flex;
+background-color: rgba(217, 217, 217, 0.80);
+}
+.i{
+  border-radius: 100px;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.i:hover{
+  scale: 1.5;
+  transition: .5s;
+}
